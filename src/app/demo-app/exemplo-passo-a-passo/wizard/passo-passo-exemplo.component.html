@@ -1,0 +1,112 @@
+<article class="col-sm-12 col-md-12 col-lg-12 sortable-grid ui-sortable">
+  <div id="wid-id-0">
+    <div role="content">
+      <div class="widget-body">
+        <div class="row">
+          <div id="bootstrap-wizard-1" class="col-sm-12">
+            <div class="form-bootstrapWizard">
+              <ul class="bootstrapWizard form-wizard">
+
+                <li data-target="#step1"
+                    (click)="finalizarStep('tab1')"
+                    [ngClass]="isTabAtiva('tab1') ? 'active' : ''">
+                  <span class="step">1</span>
+                  <span class="title">Step 1</span>
+                </li>
+
+                <li data-target="#step2"
+                    (click)="finalizarStep('tab2')"
+                    [ngClass]="isTabAtiva('tab2') ? 'active' : ''">
+                  <span class="step">2</span>
+                  <span class="title">Step 2</span>
+                </li>
+                <li data-target="#step3"
+                    (click)="finalizarStep('tab3')"
+                    [ngClass]="isTabAtiva('tab3') ? 'active' : ''">
+                  <span class="step">3</span>
+                  <span class="title">Step 3</span>
+                </li>
+                <li data-target="#step4"
+                    (click)="finalizarStep('tab4')"
+                    [ngClass]="isTabAtiva('tab4') ? 'active' : ''">
+                  <span class="step">4</span>
+                  <span class="title">Step 4</span>
+                </li>
+              </ul>
+              <div class="clearfix"></div>
+            </div>
+
+            <div class="tab-content">
+
+              <div
+                class="tab-pane"
+                id="tab1"
+                [ngClass]="isTabAtiva('tab1') ? 'active' : ''">
+
+                <div>
+                  <app-step1 #tab1Form></app-step1>
+                </div>
+
+                <app-passo-passo-change-button
+                  [passoPassoInstance]="this"
+                  [previousTabId]="'tab1'"
+                  [nextTabId]="'tab2'">
+                </app-passo-passo-change-button>
+
+              </div>
+
+              <div
+                class="tab-pane"
+                id="tab2"
+                [ngClass]="isTabAtiva('tab2') ? 'active' : ''">
+
+                <div style="padding-top: 40px">
+                  <app-step2 #tab2Form></app-step2>
+                </div>
+
+                <app-passo-passo-change-button
+                  [passoPassoInstance]="this"
+                  [previousTabId]="'tab1'"
+                  [nextTabId]="'tab3'">
+                </app-passo-passo-change-button>
+
+              </div>
+
+              <div
+                class="tab-pane"
+                id="tab3"
+                [ngClass]="isTabAtiva('tab3') ? 'active' : ''">
+
+                <div style="padding-top: 40px">
+                  <app-step3 #tab3Form></app-step3>
+                </div>
+
+                <app-passo-passo-change-button
+                  [passoPassoInstance]="this"
+                  [previousTabId]="'tab2'"
+                  [nextTabId]="'tab4'">
+                </app-passo-passo-change-button>
+
+              </div>
+
+              <div
+                class="tab-pane"
+                id="tab4"
+                [ngClass]="isTabAtiva('tab4') ? 'active' : ''">
+                <div style="padding-top: 40px">
+                  <app-step4 #tab4Form></app-step4>
+                </div>
+
+                <app-passo-passo-change-button
+                  [passoPassoInstance]="this"
+                  [previousTabId]="'tab3'"
+                  [nextTabId]="'tab4'">
+                </app-passo-passo-change-button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</article>

@@ -1,0 +1,19 @@
+<div class="row form-group">
+  <div>
+    <div class=" col-md-12">
+      <div class="alert alert-info" role="alert">
+        <p class="text-center">
+          Informações do step 2
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <div *ngIf="error == true" class=" col-md-12" style="margin-top: 50px;">
+    <div class="alert alert-danger" role="alert">
+      <p class="text-center">
+        Não conseguiu mudar de step por falha de validação
+      </p>
+    </div>
+  </div>
+</div>
