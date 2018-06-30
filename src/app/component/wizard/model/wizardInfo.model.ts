@@ -1,4 +1,4 @@
-export class PassoPassoInfo {
+export class WizardInfo {
 
   private _properties = new Map<String, Object>();
 

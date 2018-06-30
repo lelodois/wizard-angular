@@ -1,20 +1,20 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { PassoPassoExemploComponent } from './passo-passo-exemplo.component';
+import { WizardChangeButtonComponent } from './wizard-change-button.component';
 
-describe('PassoPassoComponent', () => {
-  let component: PassoPassoExemploComponent;
-  let fixture: ComponentFixture<PassoPassoExemploComponent>;
+describe('WizardChangeButtonComponent', () => {
+  let component: WizardChangeButtonComponent;
+  let fixture: ComponentFixture<WizardChangeButtonComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ PassoPassoExemploComponent ]
+      declarations: [ WizardChangeButtonComponent ]
     })
     .compileComponents();
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(PassoPassoExemploComponent);
+    fixture = TestBed.createComponent(WizardChangeButtonComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

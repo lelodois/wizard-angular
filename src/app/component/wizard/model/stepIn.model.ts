@@ -1,4 +1,4 @@
-export class PassoPassoStepEntrada {
+export class WizardStepIn {
 
   constructor(private _targertTabId: String,
               private _finalizado = false) {

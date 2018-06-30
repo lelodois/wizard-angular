@@ -1,42 +1,42 @@
 import {NgModule} from '@angular/core';
 
 import {BrowserModule} from '@angular/platform-browser';
-import {PassoPassoService} from './framework/component/ucs-passo-a-passo/service/passo-passo.service';
+import {WizardEventService} from './component/wizard/service/wizard-event.service';
 import {AppComponent} from './app.component';
-import {PassoPassoExemploComponent} from './demo-app/exemplo-passo-a-passo/wizard/passo-passo-exemplo.component';
-import {Step1Component} from './demo-app/exemplo-passo-a-passo/step1/step1.component';
-import {Step2Component} from './demo-app/exemplo-passo-a-passo/step2/step2.component';
-import {Step3Component} from './demo-app/exemplo-passo-a-passo/step3/step3.component';
-import {Step4Component} from './demo-app/exemplo-passo-a-passo/step4/step4.component';
-import {PassoPassoChangeButtonComponent} from './framework/component/ucs-passo-a-passo/component/passo-passo-change-button/passo-passo-change-button.component';
+import {WizardChangeButtonComponent} from './component/wizard/component/wizard-change-button/wizard-change-button.component';
+import {WizardExampleComponent} from './exemplo/wizard/wizard-example.component';
+import {Step1Component} from './exemplo/step1/step1.component';
+import {Step2Component} from './exemplo/step2/step2.component';
+import {Step3Component} from './exemplo/step3/step3.component';
+import {Step4Component} from './exemplo/step4/step4.component';
 
 @NgModule({
-  imports: [
-    BrowserModule
-  ],
-  providers: [
-    PassoPassoService
-  ],
-  declarations: [
-    AppComponent,
-    PassoPassoExemploComponent,
-    Step1Component,
-    Step2Component,
-    Step3Component,
-    Step4Component,
-    PassoPassoChangeButtonComponent
-  ],
-  exports: [
-    PassoPassoExemploComponent,
-    Step1Component,
-    Step2Component,
-    Step3Component,
-    Step4Component,
-    PassoPassoChangeButtonComponent
-  ],
-  bootstrap: [
-    AppComponent
-  ]
+    imports: [
+        BrowserModule
+    ],
+    providers: [
+        WizardEventService
+    ],
+    declarations: [
+        AppComponent,
+        Step1Component,
+        Step2Component,
+        Step3Component,
+        Step4Component,
+        WizardExampleComponent,
+        WizardChangeButtonComponent
+    ],
+    exports: [
+        Step1Component,
+        Step2Component,
+        Step3Component,
+        Step4Component,
+        WizardExampleComponent,
+        WizardChangeButtonComponent
+    ],
+    bootstrap: [
+        AppComponent
+    ]
 })
 export class AppModule {
 }
