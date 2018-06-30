@@ -1,4 +1,4 @@
-## Wizard com angular 4
+## Componente Wizard com angular 4
 
 
 * Controlar iteração entre steps;
