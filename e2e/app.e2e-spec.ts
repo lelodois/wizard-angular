@@ -1,6 +1,6 @@
 import { AppPage } from './app.po';
 
-describe('ucs-passo-a-passo App', () => {
+describe('wizard-angular App', () => {
   let page: AppPage;
 
   beforeEach(() => {
